@@ -1,6 +1,8 @@
 import 'package:ecommerce_app_with_push_notification/widgets/small_text.dart';
 import 'package:flutter/material.dart';
 
+import '../utils/dimensions.dart';
+
 class IconAndTextWidget extends StatelessWidget {
   final IconData icon;
   final String text;
@@ -20,6 +22,7 @@ class IconAndTextWidget extends StatelessWidget {
         Icon(
           icon,
           color: iconColor,
+          size: Dimensions.iconSize24,
         ),
         SizedBox(
           width: 5,

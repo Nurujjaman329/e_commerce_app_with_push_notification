@@ -1,3 +1,4 @@
+import 'package:ecommerce_app_with_push_notification/utils/dimensions.dart';
 import 'package:ecommerce_app_with_push_notification/widgets/big_text.dart';
 import 'package:ecommerce_app_with_push_notification/widgets/small_text.dart';
 import 'package:flutter/material.dart';
@@ -21,8 +22,10 @@ class _MainFoodPageState extends State<MainFoodPage> {
           children: [
             Container(
               child: Container(
-                margin: EdgeInsets.only(top: 25, bottom: 15),
-                padding: EdgeInsets.only(left: 20.0, right: 20.0),
+                margin: EdgeInsets.only(
+                    top: Dimensions.height45, bottom: Dimensions.height15),
+                padding: EdgeInsets.only(
+                    left: Dimensions.width20, right: Dimensions.width20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -44,14 +47,16 @@ class _MainFoodPageState extends State<MainFoodPage> {
                     ),
                     Center(
                       child: Container(
-                        width: 45,
-                        height: 45,
+                        width: Dimensions.height45,
+                        height: Dimensions.height45,
                         child: Icon(
                           Icons.search,
                           color: Colors.white,
+                          size: Dimensions.iconSize24,
                         ),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
+                          borderRadius:
+                              BorderRadius.circular(Dimensions.radius15),
                           color: Colors.blue,
                         ),
                       ),
@@ -60,7 +65,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                 ),
               ),
             ),
-            FoodPageBody(),
+            Expanded(child: SingleChildScrollView(child: FoodPageBody())),
           ],
         ),
       ),
