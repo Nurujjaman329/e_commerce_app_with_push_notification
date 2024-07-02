@@ -108,8 +108,8 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                   child: Row(
                     children: [
                       Container(
-                        width: 120,
-                        height: 120,
+                        width: Dimensions.ListViewImgSize,
+                        height: Dimensions.ListViewImgSize,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(
                               Dimensions.radius20,
@@ -120,13 +120,58 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                               image: AssetImage("assets/images/food_1.1.png"),
                             )),
                       ),
-                      Container(
-                        height: 100,
-                        width: 200,
-                        decoration: BoxDecoration(
-                          borderRadius:
-                              BorderRadius.circular(Dimensions.radius20),
-                          color: Colors.white,
+                      Expanded(
+                        child: Container(
+                          height: Dimensions.ListViewTextContSize,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(
+                                  Dimensions.radius20,
+                                ),
+                                bottomRight:
+                                    Radius.circular(Dimensions.radius20)),
+                            color: Colors.white,
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.only(left: Dimensions.width10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                BigText(text: "Nutrition fruit meal in China "),
+                                SizedBox(
+                                  height: Dimensions.height10,
+                                ),
+                                SmallText(
+                                  text: "With Chinese Characteristics",
+                                ),
+                                SizedBox(
+                                  height: Dimensions.height10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    IconAndTextWidget(
+                                      icon: Icons.circle_sharp,
+                                      text: "Normal",
+                                      iconColor: Colors.blueAccent,
+                                    ),
+                                    IconAndTextWidget(
+                                      icon: Icons.location_on,
+                                      text: "1.7km",
+                                      iconColor: Colors.blueAccent,
+                                    ),
+                                    IconAndTextWidget(
+                                      icon: Icons.access_time_rounded,
+                                      text: "32min",
+                                      iconColor: Colors.blueAccent,
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
                       ),
                     ],
