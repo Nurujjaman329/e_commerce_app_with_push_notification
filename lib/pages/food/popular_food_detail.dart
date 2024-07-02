@@ -1,5 +1,6 @@
 import 'package:ecommerce_app_with_push_notification/widgets/app_icon.dart';
 import 'package:ecommerce_app_with_push_notification/widgets/big_text.dart';
+import 'package:ecommerce_app_with_push_notification/widgets/expandable_text_widgets.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/dimensions.dart';
@@ -66,6 +67,17 @@ class PopularFoodDetail extends StatelessWidget {
                       height: Dimensions.height20,
                     ),
                     BigText(text: "Introduce"),
+                    SizedBox(
+                      height: Dimensions.height20,
+                    ),
+                    Expanded(
+                      child: SingleChildScrollView(
+                        child: ExpandableTextWidgets(
+                          text:
+                              "This is an e-commerce app for food delivery using flutter with backend as crash course tutorial for iOS and Android. This is a shopping app with backend of Laravel and Laravel admin panel using restful api complete CRUD operations. We also used firebase for notification. This tutorial covers complete shopping cart, placing orders, signup or registration, sign-in or login, payment.This is an e-commerce app for food delivery using flutter with backend as crash course tutorial for iOS and Android. This is a shopping app with backend of Laravel and Laravel admin panel using restful api complete CRUD operations. We also used firebase for notification. This tutorial covers complete shopping cart, placing orders, signup or registration, sign-in or login, payment.",
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
